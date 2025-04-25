@@ -2,6 +2,7 @@
 
 import { Header, Container } from '@/styles/pages/app';
 import logoImg from '../assets/logo.svg';
+import Image from 'next/image.js';
 
 export default function RootLayout({
   children,
@@ -13,7 +14,7 @@ export default function RootLayout({
       <body>
           <Container>
             <Header>
-              <img src={logoImg.src} alt="Logo" />
+              <Image src={logoImg} alt="Logo"/>
             </Header>
             {children}
           </Container>
