@@ -1,8 +1,7 @@
-'use server';
 import Stripe from "stripe";
 import { stripe } from "./stripe";
 
-export const getServerSideProps = async () => {
+export const getProducts = async () => {
   const response = await stripe.products.list({
     expand: ['data.default_price'],
   });
